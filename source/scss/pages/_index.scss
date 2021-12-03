@@ -1,0 +1,212 @@
+
+.input-area{
+  background-color: $color-dark;
+  padding-top: 74px;
+  padding-bottom: 74px;
+  .wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__inputs{
+    margin-left: 97px;
+    margin-right: 53px;
+    label{
+      color: $color-primary;
+      display: block;
+      font-size: $fs-md;
+      margin-bottom: 8px;
+    }
+    input{
+      display: block;
+      color: white;
+      font-size: $fs-xlg;
+      width: 250px;
+      padding: 0.5rem 1rem;
+      background: none;
+      outline: none;
+      border: 2px solid $color-primary;
+      border-radius: 10px;
+    }
+    input:first-of-type{
+      margin-bottom: 1.5rem;
+    }
+    input::placeholder{
+      color: white;
+      opacity: 0.5;
+    }
+  }
+  &__result.active {
+    .result-btn {
+      display: none;
+    }
+    .result{
+      display: flex;
+    }
+  }
+  &__result .result-btn{
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: $color-primary;
+    border: none;
+    font-size: $fs-xlg;
+    &:hover{
+      box-shadow: 0 1px 6px 3px rgba(255,196,50,0.64);
+    }
+    &:active{
+      background-color: #DEA821;
+    }
+  }
+  &__result .result{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  &__result .result-circle{
+    position: relative;
+    width: 123px;
+    height: 123px;
+    border-radius: 50%;
+    border: 6px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 18px;
+    &.underWeight,
+    &.underWeight + .result-text{
+      color: $color-underWeight;
+      border-color: $color-underWeight;
+      .loop-icon{
+        background-color: $color-underWeight;
+      }
+    }
+    &.normal,
+    &.normal + .result-text{
+      color: $color-ideal;
+      border-color: $color-ideal;
+      .loop-icon{
+        background-color: $color-ideal;
+      }
+    }
+    &.overWeight,
+    &.overWeight + .result-text{
+      color: $color-overWeight;
+      border-color: $color-overWeight;
+      .loop-icon{
+        background-color: $color-overWeight;
+      }
+    }
+    &.mildObesity,
+    &.mildObesity + .result-text,
+    &.obesity,
+    &.obesity + .result-text{
+      color: $color-mildObesity;
+      border-color: $color-mildObesity;
+      .loop-icon {
+        background-color: $color-mildObesity;
+      }
+    }
+    &.severeObesity,
+    &.severeObesity + .result-text{
+      color: $color-severeObesity;
+      border-color: $color-severeObesity;
+      .loop-icon{
+        background-color: $color-severeObesity;
+      }
+    }
+    .result-number{
+      font-size: $fs-xxlg;
+      margin-bottom: 4px;
+    }
+    .loop-icon{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border: 3px solid $color-dark;
+      border-radius: 50%;
+      right: -5%;
+      bottom: 5%;
+    }
+  }
+  &__result .result-text{
+    font-size: $fs-xxlg;
+    position: absolute;
+    right: -120px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.outcome-area{
+  background-color: $color-gray;
+  padding-top: 48px;
+  padding-bottom: 74px;
+  min-height: calc(100vh - 411px);
+  .title{
+    text-align: center;
+    font-size: $fs-xlg;
+    margin-bottom: 36px;
+  }
+  .list-item{
+    width: 624px;
+    margin: 0 auto;
+    padding: 21px 12px 21px 19px;
+    background-color: $color-white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1rem;
+    .status-bar{
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom:0;
+      width: 7px;
+      &.underWeight{
+        background-color: $color-underWeight;
+      }
+      &.normal{
+        background-color: $color-ideal;
+      }
+      &.overWeight{
+        background-color: $color-overWeight;
+      }
+      &.mildObesity,
+      &.obesity{
+        background-color: $color-mildObesity;
+      }
+      &.severeObesity{
+        background-color: $color-severeObesity;
+      }
+    }
+    .status{
+      font-size: $fs-lg;
+    }
+    .number{
+      display: flex;
+      align-items: center;
+      p:first-child{
+        font-size: $fs-sm;
+        margin-right: 8px;
+      }
+      p:last-child{
+        font-size: $fs-lg;
+      }
+    }
+  }
+}
+.footer{
+  padding: 18px 0;
+  background-color: $color-primary;
+  img{
+    display: block;
+    margin: 0 auto;
+  }
+}

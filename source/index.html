@@ -1,0 +1,52 @@
+---
+title: 首頁
+layout: ./source/layout.ejs
+engine: ejs
+current: index
+---
+
+<div class="input-area">
+  <div class="wrap">
+    <div class="input-area__logo">
+      <img src="./images/BMICLogo.png" alt="main-logo">
+    </div>
+    <div class="input-area__inputs">
+      <label for="height">身高 cm</label>
+      <input type="number" 
+             id="height"
+             placeholder="請輸入身高">
+      <label for="weight">體重 kg</label>
+      <input type="number"
+             id="weight"
+             placeholder="請輸入體重">
+    </div>
+    <div class="input-area__result" id="result-area">
+      <input type="button"
+             class="result-btn"
+             value="看結果">
+      <div class="result">
+        <div class="result-circle">
+          <p class="result-number">11.94</p>
+          <span>BMI</span>
+          <a href="#" class="loop-icon">
+            <img src="./images/icons_loop.png" alt="icons_loop">
+          </a>
+        </div>
+        <p class="result-text">
+          輕度肥胖
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="outcome-area">
+  <div class="wrap">
+    <h1 class="title">BMI紀錄</h1>
+    <ul class="list">
+      <!-- js渲染 -->
+    </ul>
+  </div>
+</div>
+<footer class="footer">
+  <img src="./images/BMICLogo-black.png" alt="footer-image">
+</footer>
